@@ -1,17 +1,17 @@
-/* styles.css */
+/* 基本のスタイル */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000; /* 背景色が黒 */
+    background-color: #000;
     color: white;
-    background-image: url('https://github.com/username/atelier-mikitora/raw/main/haikei.jpg'); /* GitHub上の画像URL */
+    background-image: url('https://github.com/username/atelier-mikitora/raw/main/haikei.jpg');
     background-size: cover;
     background-position: center;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.7); /* 半透明の黒 */
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     text-align: center;
 }
@@ -47,4 +47,28 @@ footer {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.8);
     color: #bbb;
+}
+
+/* スマホ版（画面幅が768px以下の場合） */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em; /* スマホでの文字サイズを小さく */
+    }
+
+    .gallery {
+        grid-template-columns: 1fr; /* 1列に変更 */
+        gap: 10px; /* ギャップを小さく */
+        padding: 10px;
+    }
+
+    .post img {
+        border-radius: 8px; /* スマホ用に角を少し丸める */
+    }
+}
+
+/* タブレット版（画面幅が768px〜1024pxの場合） */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2列表示に */
+    }
 }
