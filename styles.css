@@ -51,6 +51,19 @@
   background-color: #555; /* ホバー時の背景色 */
 }
 
+/* メインコンテンツのスタイル */
+main {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+  color: #333;
+  text-align: center;
+  margin-top: 50px; /* 上部にスペースを追加 */
+}
+
 /* ホームのatelier mikitoraは大きく表示 */
 .home-title {
   font-size: 72px;
