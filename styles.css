@@ -1,90 +1,118 @@
-/* サイドバー（タブ）のスタイル */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -250px; /* 初期状態では画面外に配置 */
-  width: 250px;
-  height: 100%;
-  background-color: #333; /* 黒色の背景 */
-  z-index: 1000;
-  transition: left 0.3s ease-in-out; /* スライドアニメーション */
-  padding-top: 50px;
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: url('haikei.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
 }
 
-.sidebar.open {
-  left: 0; /* タブを表示させるために左から0にスライド */
+.site-title {
+  text-align: center;
+  font-size: 3em;
+  margin-top: 1.5em;
 }
 
-/* メニューアイコン（3本線） */
+.lead-text {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 2em;
+}
+
 .menu-button {
   position: fixed;
-  bottom: 20px; /* 左下に配置 */
+  bottom: 20px;
   left: 20px;
-  font-size: 30px;
+  font-size: 2em;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.5em 0.8em;
+  border-radius: 8px;
+  z-index: 1001;
   cursor: pointer;
-  z-index: 1001; /* タブより前に表示 */
 }
 
-/* サイドバーのタブを下から並べる */
-.sidebar ul {
+.side-menu {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  color: white;
+  transition: 0.4s ease;
+  z-index: 1000;
+}
+
+.side-menu nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   position: absolute;
-  bottom: 0; /* 下に配置 */
+  bottom: 40px;
   width: 100%;
   text-align: center;
 }
 
-.sidebar li {
-  margin: 10px 0;
+.side-menu nav ul li {
+  margin: 20px 0;
 }
 
-.sidebar a {
+.side-menu nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.5em;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+.main-content {
+  transition: transform 0.4s ease;
+  padding: 1em;
+}
+
+.main-content.shifted {
+  transform: translateX(100%);
+}
+
+.gallery-section, .sns-section {
+  padding: 2em 1em;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1em;
+}
+
+.photo-card {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.photo-card img {
+  width: 100%;
   display: block;
-  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover img {
+  transform: scale(1.05);
+}
+
+.caption {
+  padding: 0.5em;
   text-align: center;
-  transition: background-color 0.3s ease;
 }
 
-.sidebar a:hover {
-  background-color: #555; /* ホバー時の背景色 */
-}
-
-/* メインコンテンツのスタイル */
-main {
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
-
-h1 {
-  font-size: 48px;
-  color: #333;
-  text-align: center;
-  margin-top: 50px; /* 上部にスペースを追加 */
-}
-
-/* ホームのatelier mikitoraは中央に表示 */
-.home-title {
-  font-size: 72px;
+.title {
   font-weight: bold;
-  color: #333;
-  margin-top: 200px; /* 上部にかなり大きなスペースを追加 */
-  text-align: center; /* 中央揃え */
 }
 
-/* タブのアニメーションと効果 */
-.sidebar ul li {
-  animation: slide-up 0.3s ease-in-out;
-}
-
-@keyframes slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.date {
+  font-size: 0.9em;
+  color: #ccc;
 }
