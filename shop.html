@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>atelier mikitora - Shop</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>shop - atelier mikitora</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="menu-button" id="menuButton">☰</div>
-
-  <div class="sidebar" id="sidebar">
-    <h1>atelier mikitora</h1>
+  <div class="menu-button" onclick="toggleMenu()">&#9776;</div>
+  <nav id="side-menu">
     <ul>
-      <li><a href="home.html">home</a></li>
-      <li><a href="snap.html">snap</a></li>
-      <li><a href="style.html">style</a></li>
-      <li><a href="items.html">items</a></li>
-      <li><a href="shop.html">shop</a></li>
       <li><a href="sns.html">sns</a></li>
+      <li><a href="shop.html">shop</a></li>
+      <li><a href="items.html">items</a></li>
+      <li><a href="style.html">style</a></li>
+      <li><a href="snap.html">snap</a></li>
+      <li><a href="index.html">home</a></li>
     </ul>
-  </div>
-
+  </nav>
   <main>
-    <section class="gallery" id="shop">
-      <h2
+    <h1 class="title">shop</h1>
+    <section class="gallery">
+      <div class="post"><img src="img/sample1.jpg" onerror="this.src='noimage.jpg';"><p>Limited Edition<br>2025-03-15</p></div>
+    </section>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>
