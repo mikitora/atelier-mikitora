@@ -3,27 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SNS - atelier mikitora</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Style | atelier mikitora</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
 </head>
 <body>
-  <div class="menu-button" onclick="toggleMenu()">&#9776;</div>
-  <nav id="side-menu">
-    <ul>
-      <li><a href="sns.html">sns</a></li>
-      <li><a href="shop.html">shop</a></li>
-      <li><a href="items.html">items</a></li>
-      <li><a href="style.html">style</a></li>
-      <li><a href="snap.html">snap</a></li>
-      <li><a href="index.html">home</a></li>
-    </ul>
-  </nav>
-  <main>
-    <h1 class="title">SNS</h1>
-    <section>
-      <p><a href="https://instagram.com/mikitora03" target="_blank">Instagram - MIKITORA03</a></p>
-    </section>
-  </main>
-  <script src="scripts.js"></script>
+  <div class="menu-container">
+    <div id="menu" class="menu">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="snap.html">Snap</a></li>
+        <li><a href="style.html">Style</a></li>
+        <li><a href="item.html">Item</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="sns.html">SNS</a></li>
+      </ul>
+    </div>
+    <div class="menu-btn" onclick="toggleMenu()">
+      ☰
+    </div>
+  </div>
+
+  <div class="main-content">
+    <h1>Style</h1>
+    <div class="content">
+      <p>スタイルの詳細をここに追加してください。</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
