@@ -3,38 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>snap - atelier mikitora</title>
+    <title>Snap | atelier mikitora</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
-    <div class="menu" id="menu">
-        <div class="menu-content">
-            <a href="home.html">home</a>
-            <a href="snap.html">snap</a>
-            <a href="items.html">items</a>
-            <a href="shop.html">shop</a>
-            <a href="sns.html">sns</a>
-        </div>
-    </div>
-
+    <!-- 共通部分：header + nav -->
     <header>
-        <div class="title">
-            <h1>atelier mikitora</h1>
-        </div>
+        <h1>atelier mikitora</h1>
+        <div id="menu-icon" class="menu-icon">&#9776;</div>
     </header>
 
-    <div id="snap">
-        <section class="gallery">
-            <h2>写真ギャラリー</h2>
-            <div class="gallery-item">
-                <img src="comingsoon.jpg" alt="Coming Soon">
-                <div class="caption">
-                    <p>タイトル - 日付</p>
+    <nav id="side-menu" class="side-menu">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="snap.html">Snap</a></li>
+            <li><a href="items.html">Items</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="sns.html">SNS</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="snap">
+            <h2>Snap</h2>
+            <div class="photo-gallery">
+                <div class="photo">
+                    <img src="comingsoon.jpg" alt="Coming Soon">
+                    <p>Title | Date</p>
                 </div>
+                <div class="photo">
+                    <img src="comingsoon.jpg" alt="Coming Soon">
+                    <p>Title | Date</p>
+                </div>
+                <!-- 他の写真も同様に追加 -->
             </div>
         </section>
-    </div>
-
-    <script src="scripts.js"></script>
+    </main>
 </body>
 </html>
