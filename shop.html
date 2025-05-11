@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Style | atelier mikitora</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop - atelier mikitora</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="menu-container">
-    <div id="menu" class="menu">
-      <ul>
-        <li><a href="index.html">ホーム</a></li>
-        <li><a href="snap.html">Snap</a></li>
-        <li><a href="style.html">Style</a></li>
-        <li><a href="item.html">Item</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="sns.html">SNS</a></li>
-      </ul>
+    <div class="menu" id="menu">
+        <div class="menu-content">
+            <a href="home.html">home</a>
+            <a href="snap.html">snap</a>
+            <a href="items.html">items</a>
+            <a href="shop.html">shop</a>
+            <a href="sns.html">sns</a>
+        </div>
     </div>
-    <div class="menu-btn" onclick="toggleMenu()">
-      ☰
-    </div>
-  </div>
 
-  <div class="main-content">
-    <h1>Style</h1>
-    <div class="content">
-      <p>スタイルの詳細をここに追加してください。</p>
-    </div>
-  </div>
+    <header>
+        <div class="title">
+            <h1>atelier mikitora</h1>
+        </div>
+    </header>
 
-  <script src="script.js"></script>
+    <div id="shop">
+        <section class="gallery">
+            <h2>ショップギャラリー</h2>
+            <div class="gallery-item">
+                <img src="comingsoon.jpg" alt="Coming Soon">
+                <div class="caption">
+                    <p>タイトル - 日付</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
