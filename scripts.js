@@ -1,3 +1,6 @@
-document.getElementById("menuButton").addEventListener("click", function () {
-  document.getElementById("sidebar").classList.toggle("open");
-});
+function toggleMenu() {
+  const menu = document.getElementById('sideMenu');
+  const content = document.getElementById('mainContent');
+  menu.classList.toggle('active');
+  content.classList.toggle('shifted');
+}
