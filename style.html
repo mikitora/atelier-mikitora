@@ -1,42 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>atelier mikitora - Style</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="menu-button" id="menuButton">☰</div>
+/* サイドバー（タブ）のスタイル */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* 初期状態では画面外に配置 */
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* 黒ベース */
+  z-index: 1000;
+  transition: left 0.3s ease-in-out; /* スライドアニメーション */
+}
 
-  <div class="sidebar" id="sidebar">
-    <h1>atelier mikitora</h1>
-    <ul>
-      <li><a href="home.html">home</a></li>
-      <li><a href="snap.html">snap</a></li>
-      <li><a href="style.html">style</a></li>
-      <li><a href="items.html">items</a></li>
-      <li><a href="shop.html">shop</a></li>
-      <li><a href="sns.html">sns</a></li>
-    </ul>
-  </div>
+.sidebar.open {
+  left: 0; /* タブを表示させるために左から0にスライド */
+}
 
-  <main>
-    <section class="gallery" id="style">
-      <h2>style</h2>
-      <div class="image-grid">
-        <div class="image-item">
-          <img src="image3.jpg" alt="Style 1" onerror="this.onerror=null; this.src='no-image.jpg';" class="image" />
-          <div class="image-info">
-            <p class="title">Casual Chic</p>
-            <p class="date">May 5, 2025</p>
-          </div>
-        </div>
-        <!-- 他の画像も同様に追加 -->
-      </div>
-    </section>
-  </main>
+/* メニューアイコン */
+.menu-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001; /* タブより前に表示 */
+}
 
-  <script src="scripts.js"></script>
-</body>
-</html>
+.sidebar ul {
+  list-style-type: none;
+  padding: 20px;
+}
+
+.sidebar li {
+  margin: 20px 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* メインコンテンツのスタイル */
+main {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+  color: #333;
+}
+
+/* スクロール時に内容が表示されないように */
+body {
+  overflow-x: hidden;
+}
+
+/* タブを画面下部に固定する */
+.menu-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001; /* タブより前に表示 */
+}
+
+/* サイドバーのタブに関連するスタイル */
+.sidebar ul {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
