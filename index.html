@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>atelier mikitora</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atelier mikitora</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="menu-container">
-    <div id="menu" class="menu">
-      <ul>
-        <li><a href="index.html">ホーム</a></li>
-        <li><a href="snap.html">Snap</a></li>
-        <li><a href="style.html">Style</a></li>
-        <li><a href="item.html">Item</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="sns.html">SNS</a></li>
-      </ul>
+    <!-- メニュー -->
+    <div class="menu" id="menu">
+        <div class="menu-content">
+            <a href="home.html">home</a>
+            <a href="snap.html">snap</a>
+            <a href="items.html">items</a>
+            <a href="shop.html">shop</a>
+            <a href="sns.html">sns</a>
+        </div>
     </div>
-    <div class="menu-btn" onclick="toggleMenu()">
-      ☰
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="title">
+            <h1>atelier mikitora</h1>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <!-- ホームコンテンツ -->
+    <div id="home">
+        <section class="home">
+            <h2>最新情報</h2>
+            <p>最新のファッションアイテムや更新情報がここに表示されます。</p>
+        </section>
     </div>
-  </div>
-  
-  <div class="main-content">
-    <h1>atelier mikitora</h1>
-    <div class="content">
-      <h2>Welcome to the Atelier Mikitora</h2>
-      <p>最新の投稿とファッションアイテムをチェックしてください。</p>
-    </div>
-  </div>
-  
-  <script src="script.js"></script>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
