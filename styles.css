@@ -5,13 +5,13 @@ body {
     padding: 0;
     background-color: #000; /* 背景色が黒 */
     color: white;
-    background-image: url('haikei.jpg'); /* 背景画像のパス */
+    background-image: url('https://github.com/username/atelier-mikitora/raw/main/haikei.jpg'); /* GitHub上の画像URL */
     background-size: cover;
     background-position: center;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明の黒 */
     padding: 20px;
     text-align: center;
 }
