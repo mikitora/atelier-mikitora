@@ -1,65 +1,30 @@
-body {
-  margin: 0;
-  padding: 0;
-  background: url("haikei.jpg") no-repeat center center fixed;
-  background-size: cover;
-  font-family: sans-serif;
-  color: white;
-}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>style - atelier mikitora</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="menu-button" onclick="toggleMenu()">&#9776;</div>
+  <nav id="side-menu">
+    <ul>
+      <li><a href="sns.html">sns</a></li>
+      <li><a href="shop.html">shop</a></li>
+      <li><a href="items.html">items</a></li>
+      <li><a href="style.html">style</a></li>
+      <li><a href="snap.html">snap</a></li>
+      <li><a href="index.html">home</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1 class="title">style</h1>
+    <section class="gallery">
+      <div class="post"><img src="img/sample1.jpg" onerror="this.src='noimage.jpg';"><p>Winter Look<br>2025-04-01</p></div>
+    </section>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>
 
-.home-title {
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 200px;
-}
-
-.menu-button {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  font-size: 30px;
-  cursor: pointer;
-  z-index: 1001;
-  color: white;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background-color: #111;
-  transition: left 0.3s ease-in-out;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-bottom: 40px;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar ul li {
-  margin: 10px 0;
-  text-align: center;
-}
-
-.sidebar ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.sidebar.open {
-  left: 0;
-}
-
-.content {
-  padding: 20px;
-}
