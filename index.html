@@ -1,46 +1,34 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>atelier mikitora</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>atelier mikitora</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="menu-button" id="menuButton">☰</div>
 
-    <!-- サイドメニュー -->
-    <nav class="sidebar" id="sidebar">
-        <ul>
-            <li><a href="#">ホーム</a></li>
-            <li><a href="#">FASHIONスナップ</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
-    </nav>
+  <div class="sidebar" id="sidebar">
+    <h1>atelier mikitora</h1>
+    <ul>
+      <li><a href="#home">ホーム</a></li>
+      <li><a href="#fashion">FASHIONスナップ</a></li>
+      <li><a href="#about">アバウト</a></li>
+    </ul>
+  </div>
 
-    <!-- メニューボタン（スマホ用） -->
-    <div class="menu-button" id="menuButton">☰</div>
+  <main>
+    <section class="gallery" id="home">
+      <h2>最新の投稿</h2>
+      <div class="images">
+        <img src="image1.jpg" alt="投稿1" />
+        <img src="image2.jpg" alt="投稿2" />
+        <!-- 必要に応じて画像を追加 -->
+      </div>
+    </section>
+  </main>
 
-    <!-- メインコンテンツ -->
-    <header>
-        <h1>atelier mikitora</h1>
-    </header>
-
-    <main class="gallery">
-        <div class="post">
-            <img src="image1.jpg" alt="投稿画像1">
-        </div>
-        <div class="post">
-            <img src="image2.jpg" alt="投稿画像2">
-        </div>
-        <div class="post">
-            <img src="image3.jpg" alt="投稿画像3">
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 atelier mikitora</p>
-    </footer>
-
-    <script src="scripts.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
