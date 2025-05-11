@@ -1,56 +1,84 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #000;
-    color: white;
+    margin: 0;
+    padding: 0;
 }
 
 header {
     text-align: center;
-    margin-top: 50px;
+    padding: 20px;
+    background-color: #333;
+    color: white;
 }
 
-#menu-icon {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
+h1 {
+    margin: 0;
+}
+
+.menu-icon {
     font-size: 30px;
     cursor: pointer;
-    z-index: 1000;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    color: white;
 }
 
 .side-menu {
+    display: none;
     position: fixed;
+    left: 0;
     top: 0;
-    left: -250px;
-    width: 250px;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
-    transition: 0.3s ease;
+    width: 250px;
+    color: white;
     padding-top: 60px;
 }
 
+.side-menu.active {
+    display: block;
+}
+
 .side-menu ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
 .side-menu ul li {
-    text-align: center;
-    margin: 15px 0;
+    padding: 10px 15px;
 }
 
 .side-menu ul li a {
-    text-decoration: none;
     color: white;
-    font-size: 20px;
-    display: block;
+    text-decoration: none;
+    font-size: 18px;
 }
 
-.side-menu.open {
-    left: 0;
+.side-menu ul li a:hover {
+    background-color: #575757;
 }
 
-#main-content {
+main {
     padding: 20px;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.photo {
+    width: 30%;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.photo img:hover {
+    opacity: 0.8;
 }
