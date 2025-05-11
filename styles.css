@@ -5,13 +5,13 @@ body {
     padding: 0;
     background-color: #000;
     color: white;
-    background-image: url('haikei.jpg');
+    background-image: url('haikei.jpg'); /* ここで背景画像を指定 */
     background-size: cover;
     background-position: center;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明の黒 */
     padding: 20px;
     text-align: center;
 }
