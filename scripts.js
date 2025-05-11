@@ -1,4 +1,3 @@
-document.getElementById("menu-toggle").addEventListener("click", function() {
-    const menu = document.getElementById("menu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
+document.getElementById("menu-icon").addEventListener("click", function() {
+    document.getElementById("side-menu").classList.toggle("open");
 });
