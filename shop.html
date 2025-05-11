@@ -3,27 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>shop - atelier mikitora</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Snap | atelier mikitora</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
 </head>
 <body>
-  <div class="menu-button" onclick="toggleMenu()">&#9776;</div>
-  <nav id="side-menu">
-    <ul>
-      <li><a href="sns.html">sns</a></li>
-      <li><a href="shop.html">shop</a></li>
-      <li><a href="items.html">items</a></li>
-      <li><a href="style.html">style</a></li>
-      <li><a href="snap.html">snap</a></li>
-      <li><a href="index.html">home</a></li>
-    </ul>
-  </nav>
-  <main>
-    <h1 class="title">shop</h1>
-    <section class="gallery">
-      <div class="post"><img src="img/sample1.jpg" onerror="this.src='noimage.jpg';"><p>Limited Edition<br>2025-03-15</p></div>
-    </section>
-  </main>
-  <script src="scripts.js"></script>
+  <div class="menu-container">
+    <div id="menu" class="menu">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="snap.html">Snap</a></li>
+        <li><a href="style.html">Style</a></li>
+        <li><a href="item.html">Item</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="sns.html">SNS</a></li>
+      </ul>
+    </div>
+    <div class="menu-btn" onclick="toggleMenu()">
+      ☰
+    </div>
+  </div>
+
+  <div class="main-content">
+    <h1>Snap</h1>
+    <div class="content">
+      <div class="image-gallery">
+        <img src="image1.jpg" alt="Snap 1">
+        <img src="image2.jpg" alt="Snap 2">
+        <img src="image3.jpg" alt="Snap 3">
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
