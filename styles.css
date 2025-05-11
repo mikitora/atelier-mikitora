@@ -84,3 +84,47 @@ main {
   border: 2px solid white;
   border-radius: 8px;
 }
+
+/* SNAPセクションのスタイル */
+#snap {
+  padding: 20px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.image-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.image-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.image-info .title {
+  font-weight: bold;
+}
+
+.image-info .date {
+  font-size: 0.8em;
+  margin-top: 5px;
+}
