@@ -1,8 +1,92 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta http-equiv="refresh" content="0; URL=home.html">
-    <title>atelier mikitora</title>
-  </head>
-  <body></body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>atelier mikitora</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="menu-button" onclick="toggleMenu()">☰</div>
+
+  <div class="side-menu" id="sideMenu">
+    <nav>
+      <ul>
+        <li><a href="#home">home</a></li>
+        <li><a href="#snap">snap</a></li>
+        <li><a href="#style">style</a></li>
+        <li><a href="#items">items</a></li>
+        <li><a href="#shop">shop</a></li>
+        <li><a href="#sns">sns</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main class="main-content" id="mainContent">
+    <section id="home">
+      <h1 class="site-title">atelier mikitora</h1>
+      <p class="lead-text">Welcome to my fashion archive.</p>
+    </section>
+
+    <section id="snap" class="gallery-section">
+      <h2>snap</h2>
+      <div class="gallery">
+        <div class="photo-card">
+          <img src="noimage.jpg" alt="no image">
+          <div class="caption">
+            <p class="title">Sample Snap</p>
+            <p class="date">2025-05-11</p>
+          </div>
+        </div>
+        <!-- 追加の写真もこの形式で -->
+      </div>
+    </section>
+
+    <section id="style" class="gallery-section">
+      <h2>style</h2>
+      <div class="gallery">
+        <div class="photo-card">
+          <img src="noimage.jpg" alt="no image">
+          <div class="caption">
+            <p class="title">My Outfit</p>
+            <p class="date">2025-05-10</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="items" class="gallery-section">
+      <h2>items</h2>
+      <div class="gallery">
+        <div class="photo-card">
+          <img src="noimage.jpg" alt="no image">
+          <div class="caption">
+            <p class="title">New Item</p>
+            <p class="date">2025-05-09</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="gallery-section">
+      <h2>shop</h2>
+      <div class="gallery">
+        <div class="photo-card">
+          <img src="noimage.jpg" alt="no image">
+          <div class="caption">
+            <p class="title">My Shop</p>
+            <p class="date">2025-05-08</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sns" class="sns-section">
+      <h2>sns</h2>
+      <p>Instagram: <a href="https://www.instagram.com/mikitora03" target="_blank">@mikitora03</a><br>tap to page</p>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
 </html>
