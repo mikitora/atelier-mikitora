@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>snap - atelier mikitora</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snap - atelier mikitora</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="menu-button" onclick="toggleMenu()">&#9776;</div>
-  <nav id="side-menu">
-    <ul>
-      <li><a href="sns.html">sns</a></li>
-      <li><a href="shop.html">shop</a></li>
-      <li><a href="items.html">items</a></li>
-      <li><a href="style.html">style</a></li>
-      <li><a href="snap.html">snap</a></li>
-      <li><a href="index.html">home</a></li>
-    </ul>
-  </nav>
-  <main>
-    <h1 class="title">snap</h1>
-    <section class="gallery">
-      <div class="post"><img src="img/sample1.jpg" onerror="this.src='noimage.jpg';"><p>Spring Look<br>2025-04-10</p></div>
-      <div class="post"><img src="img/sample2.jpg" onerror="this.src='noimage.jpg';"><p>Urban Style<br>2025-04-08</p></div>
-      <div class="post"><img src="img/sample3.jpg" onerror="this.src='noimage.jpg';"><p>Classic Mood<br>2025-04-05</p></div>
-    </section>
-  </main>
-  <script src="scripts.js"></script>
+    <div class="menu" id="menu">
+        <div class="menu-content">
+            <a href="home.html">home</a>
+            <a href="snap.html">snap</a>
+            <a href="items.html">items</a>
+            <a href="shop.html">shop</a>
+            <a href="sns.html">sns</a>
+        </div>
+    </div>
+
+    <header>
+        <div class="title">
+            <h1>atelier mikitora</h1>
+        </div>
+    </header>
+
+    <div id="snap">
+        <section class="gallery">
+            <h2>写真ギャラリー</h2>
+            <div class="gallery-item">
+                <img src="comingsoon.jpg" alt="Coming Soon">
+                <div class="caption">
+                    <p>タイトル - 日付</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
