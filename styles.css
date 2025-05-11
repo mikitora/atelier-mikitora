@@ -17,8 +17,8 @@
 
 /* メニューアイコン */
 .menu-button {
-  position: absolute;
-  top: 20px;
+  position: fixed;
+  bottom: 20px; /* 左下に配置 */
   left: 20px;
   font-size: 30px;
   cursor: pointer;
@@ -64,12 +64,13 @@ h1 {
   margin-top: 50px; /* 上部にスペースを追加 */
 }
 
-/* ホームのatelier mikitoraは大きく表示 */
+/* ホームのatelier mikitoraは中央に表示 */
 .home-title {
   font-size: 72px;
   font-weight: bold;
   color: #333;
-  margin-top: 50px; /* 上部にスペースを追加 */
+  margin-top: 200px; /* 上部にかなり大きなスペースを追加 */
+  text-align: center; /* 中央揃え */
 }
 
 /* タブのアニメーションと効果 */
