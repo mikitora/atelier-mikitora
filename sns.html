@@ -3,34 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SNS - atelier mikitora</title>
+    <title>SNS | atelier mikitora</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
-    <div class="menu" id="menu">
-        <div class="menu-content">
-            <a href="home.html">home</a>
-            <a href="snap.html">snap</a>
-            <a href="items.html">items</a>
-            <a href="shop.html">shop</a>
-            <a href="sns.html">sns</a>
-        </div>
-    </div>
-
+    <!-- 共通部分：header + nav -->
     <header>
-        <div class="title">
-            <h1>atelier mikitora</h1>
-        </div>
+        <h1>atelier mikitora</h1>
+        <div id="menu-icon" class="menu-icon">&#9776;</div>
     </header>
 
-    <div id="sns">
+    <nav id="side-menu" class="side-menu">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="snap.html">Snap</a></li>
+            <li><a href="items.html">Items</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="sns.html">SNS</a></li>
+        </ul>
+    </nav>
+
+    <main>
         <section class="sns">
             <h2>Instagram</h2>
-            <p>MIKITORA03</p>
-            <a href="https://www.instagram.com/mikitora03/" target="_blank">Instagram Profile</a>
+            <p><a href="https://www.instagram.com/mikitora03" target="_blank">MIKITORA03</a></p>
+            <p>@mikitora03</p>
         </section>
-    </div>
-
-    <script src="scripts.js"></script>
+    </main>
 </body>
 </html>
