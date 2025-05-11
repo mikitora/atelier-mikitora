@@ -1,35 +1,33 @@
+/* 基本のスタイル */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
+  padding: 0;
   background-color: black;
-  background-image: url('haikei.jpg');
-  background-size: cover;
-  background-position: center;
   color: white;
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.menu-button {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  font-size: 2em;
-  color: white;
-  cursor: pointer;
-  z-index: 1100;
+h1, h2 {
+  text-align: center;
 }
 
+h2 {
+  margin-bottom: 20px;
+}
+
+/* メニュー */
 .sidebar {
+  background-color: #111;
+  width: 250px;
   position: fixed;
   top: 0;
   left: -250px;
-  width: 220px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.95);
-  padding: 40px 20px;
-  box-shadow: 2px 0 5px rgba(255, 255, 255, 0.1);
-  transition: left 0.3s ease;
-  z-index: 1000;
+  padding-top: 60px;
+  transition: 0.3s;
 }
 
 .sidebar.open {
@@ -37,8 +35,8 @@ body {
 }
 
 .sidebar h1 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
 }
 
 .sidebar ul {
@@ -47,59 +45,39 @@ body {
 }
 
 .sidebar li {
-  margin-bottom: 15px;
+  padding: 15px 25px;
 }
 
 .sidebar a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 18px;
 }
 
-main {
-  padding: 80px 20px 20px 20px;
+.menu-button {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
 }
 
+/* ギャラリーのスタイル */
 .gallery {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.gallery h2 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
-}
-
-.images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.images img {
-  width: 100%;
-  max-width: 180px;
-  height: auto;
-  border: 2px solid white;
-  border-radius: 8px;
-}
-
-/* SNAPセクションのスタイル */
-#snap {
-  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
 }
 
 .image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-top: 20px;
 }
 
 .image-item {
   position: relative;
-  overflow: hidden;
 }
 
 .image-item img {
@@ -112,19 +90,30 @@ main {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  right: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px;
   color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
   border-radius: 5px;
-  font-size: 0.9em;
 }
 
-.image-info .title {
+/* no-image表示用のスタイル */
+.no-image {
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#sns a {
+  color: #1da1f2;
   font-weight: bold;
 }
 
-.image-info .date {
-  font-size: 0.8em;
+#sns span {
+  display: block;
+  font-size: 0.9em;
+  color: #888;
   margin-top: 5px;
 }
