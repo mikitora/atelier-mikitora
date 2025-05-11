@@ -5,9 +5,10 @@
   left: -250px; /* 初期状態では画面外に配置 */
   width: 250px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9); /* 黒ベース */
+  background-color: #333; /* 黒色の背景 */
   z-index: 1000;
   transition: left 0.3s ease-in-out; /* スライドアニメーション */
+  padding-top: 50px;
 }
 
 .sidebar.open {
@@ -24,33 +25,52 @@
   z-index: 1001; /* タブより前に表示 */
 }
 
+/* サイドバーのタブを下から並べる */
 .sidebar ul {
-  list-style-type: none;
-  padding: 20px;
+  position: absolute;
+  bottom: 0; /* 下に配置 */
+  width: 100%;
+  text-align: center;
 }
 
 .sidebar li {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .sidebar a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease;
 }
 
-/* メインコンテンツのスタイル */
-main {
-  padding: 20px;
-  font-family: Arial, sans-serif;
+.sidebar a:hover {
+  background-color: #555; /* ホバー時の背景色 */
 }
 
-h1 {
-  font-size: 32px;
+/* ホームのatelier mikitoraは大きく表示 */
+.home-title {
+  font-size: 72px;
+  font-weight: bold;
   color: #333;
+  margin-top: 50px; /* 上部にスペースを追加 */
 }
 
-/* スクロール時に内容が表示されないように */
-body {
-  overflow-x: hidden;
+/* タブのアニメーションと効果 */
+.sidebar ul li {
+  animation: slide-up 0.3s ease-in-out;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
