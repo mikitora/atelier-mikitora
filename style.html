@@ -1,74 +1,65 @@
-/* サイドバー（タブ）のスタイル */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -250px; /* 初期状態では画面外に配置 */
-  width: 250px;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9); /* 黒ベース */
-  z-index: 1000;
-  transition: left 0.3s ease-in-out; /* スライドアニメーション */
-}
-
-.sidebar.open {
-  left: 0; /* タブを表示させるために左から0にスライド */
-}
-
-/* メニューアイコン */
-.menu-button {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 30px;
-  cursor: pointer;
-  z-index: 1001; /* タブより前に表示 */
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 20px;
-}
-
-.sidebar li {
-  margin: 20px 0;
-}
-
-.sidebar a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-/* メインコンテンツのスタイル */
-main {
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
-
-h1 {
-  font-size: 32px;
-  color: #333;
-}
-
-/* スクロール時に内容が表示されないように */
 body {
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background: url("haikei.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: sans-serif;
+  color: white;
 }
 
-/* タブを画面下部に固定する */
+.home-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 200px;
+}
+
 .menu-button {
   position: fixed;
   bottom: 20px;
   left: 20px;
   font-size: 30px;
   cursor: pointer;
-  z-index: 1001; /* タブより前に表示 */
+  z-index: 1001;
+  color: white;
 }
 
-/* サイドバーのタブに関連するスタイル */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #111;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 40px;
+}
+
 .sidebar ul {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
   text-align: center;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.content {
+  padding: 20px;
 }
