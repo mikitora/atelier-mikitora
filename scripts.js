@@ -1,23 +1,5 @@
-const sidebar = document.getElementById('sidebar');
-const menuButton = document.getElementById('menuButton');
-
-menuButton.addEventListener('click', () => {
-  sidebar.classList.toggle('open');
-});
-
-let startX = 0;
-
-document.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].clientX;
-});
-
-document.addEventListener('touchend', (e) => {
-  const endX = e.changedTouches[0].clientX;
-  const swipeDistance = endX - startX;
-
-  if (swipeDistance > 100) {
-    sidebar.classList.add('open');
-  } else if (swipeDistance < -100) {
-    sidebar.classList.remove('open');
-  }
+// メニュー（タブ）の開閉機能
+document.getElementById("menuButton").addEventListener("click", function() {
+  var sidebar = document.getElementById("sidebar");
+  sidebar.classList.toggle("open"); // サイドバーを表示・非表示
 });
