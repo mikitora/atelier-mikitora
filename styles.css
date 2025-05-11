@@ -1,11 +1,10 @@
-/* 基本のスタイル */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #000;
     color: white;
-    background-image: url('https://github.com/username/atelier-mikitora/raw/main/haikei.jpg');
+    background-image: url('https://github.com/あなたのユーザー名/atelier-mikitora/raw/main/haikei.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -22,6 +21,7 @@ header h1 {
     font-weight: bold;
 }
 
+/* ギャラリー */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -29,19 +29,12 @@ header h1 {
     padding: 20px;
 }
 
-.post {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-}
-
 .post img {
     width: 100%;
-    height: auto;
-    display: block;
     border-radius: 10px;
 }
 
+/* フッター */
 footer {
     text-align: center;
     padding: 10px;
@@ -49,26 +42,69 @@ footer {
     color: #bbb;
 }
 
-/* スマホ版（画面幅が768px以下の場合） */
+/* --- サイドメニュー --- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    width: 200px;
+    height: 100%;
+    background-color: #111;
+    color: white;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* メニューボタン */
+.menu-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+/* --- レスポンシブ対応 --- */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2em; /* スマホでの文字サイズを小さく */
+        font-size: 2em;
     }
 
     .gallery {
-        grid-template-columns: 1fr; /* 1列に変更 */
-        gap: 10px; /* ギャップを小さく */
+        grid-template-columns: 1fr;
+        gap: 10px;
         padding: 10px;
     }
 
     .post img {
-        border-radius: 8px; /* スマホ用に角を少し丸める */
+        border-radius: 8px;
     }
 }
 
-/* タブレット版（画面幅が768px〜1024pxの場合） */
 @media (max-width: 1024px) and (min-width: 769px) {
     .gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2列表示に */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
