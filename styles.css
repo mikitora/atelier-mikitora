@@ -12,6 +12,51 @@ body {
     background-attachment: fixed;
     color: #fff;
     line-height: 1.6;
+    overflow-x: hidden; /* 横スクロールを防ぐ */
+}
+
+/* メニュー */
+.menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* メニューを初期状態で左に隠す */
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: left 0.3s ease; /* スライドアニメーション */
+    z-index: 9999;
+}
+
+.menu.show {
+    left: 0; /* メニューが表示される状態 */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.menu ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.menu ul li a {
+    font-size: 20px;
+    display: block;
+    color: #fff;
+}
+
+/* 三本線のメニューボタン */
+.menu-toggle {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10000;
 }
 
 h1, h2 {
@@ -27,34 +72,6 @@ a {
 img {
     width: 100%;
     height: auto;
-}
-
-/* メニュー */
-.menu {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    flex-direction: column;
-    padding-top: 50px;
-}
-
-.menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.menu ul li {
-    padding: 15px;
-    text-align: center;
-}
-
-.menu ul li a {
-    font-size: 20px;
-    display: block;
 }
 
 /* ページ内容 */
@@ -75,4 +92,9 @@ section {
 footer {
     background-color: #222;
     text-align: center;
-   
+    padding: 20px;
+    color: #aaa;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
