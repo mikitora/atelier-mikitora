@@ -23,3 +23,8 @@ document.body.addEventListener('touchend', (e) => {
         menu.classList.remove('show');
     }
 });
+
+// ページ遷移時にメニューを隠す
+window.addEventListener('load', () => {
+    menu.classList.remove('show');
+});
