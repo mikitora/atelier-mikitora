@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="atelier mikitora - モダンなファッション">
-    <title>atelier mikitora</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="atelier mikitora - 最新ファッションをお届け">
+  <title>atelier mikitora</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <script src="scripts.js" defer></script>
 </head>
 <body>
-    <!-- メニュー -->
-    <div class="menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="snap.html">Snap</a></li>
-            <li><a href="items.html">Items</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="sns.html">SNS</a></li>
-        </ul>
+  <!-- ローディングアニメーション -->
+  <div id="loader" class="loader">Loading...</div>
+
+  <!-- メニュー -->
+  <div id="menu" class="menu">
+    <div class="menu-header">
+      <span class="close-menu" onclick="closeMenu()">×</span>
     </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="snap.html">Snap</a></li>
+      <li><a href="items.html">Items</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="sns.html">SNS</a></li>
+    </ul>
+  </div>
 
-    <!-- メニューボタン -->
-    <div class="menu-toggle">
-        &#9776; <!-- 三本線のアイコン -->
+  <!-- メニューアイコン -->
+  <div class="menu-icon" onclick="openMenu()">&#9776;</div>
+
+  <!-- メインコンテンツ -->
+  <div class="content">
+    <header class="main-header">
+      <h1>atelier mikitora</h1>
+      <p class="tagline">Fashion for every moment</p>
+    </header>
+
+    <section class="latest-info">
+      <h2>最新情報</h2>
+      <p>今週の新しいアイテムをチェックしてみてください！</p>
+    </section>
+  </div>
+
+  <!-- フッター -->
+  <footer>
+    <p>&copy; 2025 atelier mikitora | All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/mikitora03" target="_blank">Instagram</a>
     </div>
-
-    <!-- ホームセクション -->
-    <section id="home">
-        <div class="home-content">
-            <h1>atelier mikitora</h1>
-            <p>モダンなファッションのアトリエへようこそ</p>
-        </div>
-    </section>
-
-    <!-- 最新情報 -->
-    <section id="latest-info">
-        <h2>最新情報</h2>
-        <p>最新のコレクションやお知らせをこちらで確認できます。</p>
-    </section>
-
-    <script src="scripts.js"></script>
+  </footer>
 </body>
 </html>
