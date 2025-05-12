@@ -1,30 +1,36 @@
-// メニューの表示切替
-const menu = document.querySelector('.menu');
-const menuToggle = document.querySelector('.menu-toggle');
+// メニューの開閉
+function openMenu() {
+  document.getElementById('menu').classList.add('open');
+}
 
-// メニューボタンがクリックされた時にメニューを表示
-menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('show');
-});
+function closeMenu() {
+  document.getElementById('menu').classList.remove('open');
+}
 
-// スワイプでメニューを表示（右スワイプ）
-let touchStartX = 0;
-let touchEndX = 0;
+// ローディングアニメーション
+window.onload = function() {
+  document.getElementById('loader').style.display = 'none';
+}
 
-document.body.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-});
+// ダークモードの切り替え
+const darkModeToggle = document.createElement('button');
+darkModeToggle.innerText = 'Dark Mode';
+darkModeToggle.style.position = 'fixed';
+darkModeToggle.style.bottom = '20px';
+darkModeToggle.style.right = '20px';
+darkModeToggle.style.padding = '10px';
+darkModeToggle.style.backgroundColor = '#ff8c00';
+darkModeToggle.style.color = '#fff';
+darkModeToggle.style.border = 'none';
+darkModeToggle.style.cursor = 'pointer';
 
-document.body.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    if (touchEndX - touchStartX > 50) { // 右スワイプ
-        menu.classList.add('show');
-    } else if (touchStartX - touchEndX > 50) { // 左スワイプ
-        menu.classList.remove('show');
-    }
-});
+document.body.appendChild(darkModeToggle);
 
-// ページ遷移時にメニューを隠す
-window.addEventListener('load', () => {
-    menu.classList.remove('show');
+darkModeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  if (document.body.classList.contains('dark-mode')) {
+    darkModeToggle.innerText = 'Light Mode';
+  } else {
+    darkModeToggle.innerText = 'Dark Mode';
+  }
 });
