@@ -1,9 +1,13 @@
-document.getElementById("menu-icon").addEventListener("click", function() {
-    document.getElementById("side-menu").classList.toggle("active");
-});
 
-document.addEventListener('click', function(e) {
-    if (!document.getElementById('menu-icon').contains(e.target) && !document.getElementById('side-menu').contains(e.target)) {
-        document.getElementById("side-menu").classList.remove("active");
-    }
-});
+### 7. **`scripts.js` (JavaScript)**
+スワイプやメニューの動作などを追加します。
+
+```javascript
+// メニューの表示切替
+const menu = document.querySelector('.menu');
+const toggleMenu = () => {
+    menu.classList.toggle('show');
+};
+
+// メニューの開閉処理（例: ハンバーガーアイコンなど）
+document.querySelector('.menu-toggle').addEventListener('click', toggleMenu);
