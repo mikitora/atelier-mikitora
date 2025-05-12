@@ -1,84 +1,78 @@
-body {
-    font-family: Arial, sans-serif;
+/* 全体設定 */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-header {
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('haikei.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    line-height: 1.6;
+}
+
+h1, h2 {
     text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+    font-weight: bold;
 }
 
-h1 {
-    margin: 0;
+a {
+    color: #fff;
+    text-decoration: none;
 }
 
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    color: white;
+img {
+    width: 100%;
+    height: auto;
 }
 
-.side-menu {
-    display: none;
+/* メニュー */
+.menu {
     position: fixed;
     left: 0;
     top: 0;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
     width: 250px;
-    color: white;
-    padding-top: 60px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
 }
 
-.side-menu.active {
-    display: block;
-}
-
-.side-menu ul {
+.menu ul {
     list-style: none;
     padding: 0;
 }
 
-.side-menu ul li {
-    padding: 10px 15px;
+.menu ul li {
+    padding: 15px;
+    text-align: center;
 }
 
-.side-menu ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+.menu ul li a {
+    font-size: 20px;
+    display: block;
 }
 
-.side-menu ul li a:hover {
-    background-color: #575757;
-}
-
-main {
-    padding: 20px;
+/* ページ内容 */
+section {
+    padding: 40px;
 }
 
 .photo-gallery {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.photo {
-    width: 30%;
+.photo-item {
+    text-align: center;
 }
 
-.photo img {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-}
-
-.photo img:hover {
-    opacity: 0.8;
-}
+footer {
+    background-color: #222;
+    text-align: center;
+   
