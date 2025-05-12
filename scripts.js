@@ -1,13 +1,25 @@
-
-### 7. **`scripts.js` (JavaScript)**
-スワイプやメニューの動作などを追加します。
-
-```javascript
 // メニューの表示切替
 const menu = document.querySelector('.menu');
-const toggleMenu = () => {
-    menu.classList.toggle('show');
-};
+const menuToggle = document.querySelector('.menu-toggle');
 
-// メニューの開閉処理（例: ハンバーガーアイコンなど）
-document.querySelector('.menu-toggle').addEventListener('click', toggleMenu);
+// メニューボタンがクリックされた時にメニューを表示
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+});
+
+// スワイプでメニューを表示（右スワイプ）
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.body.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+document.body.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    if (touchEndX - touchStartX > 50) { // 右スワイプ
+        menu.classList.add('show');
+    } else if (touchStartX - touchEndX > 50) { // 左スワイプ
+        menu.classList.remove('show');
+    }
+});
